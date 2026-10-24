@@ -1,0 +1,36 @@
+{
+  "format": "mw4-vi-only-overlay-v1",
+  "release": "V6.157_LIVE_VERIFIED_2026-10-24",
+  "game_dictionary_count": 40085,
+  "english_fingerprint_sha256": "4e67f94799574f55f3398c3223811072741f9b19d75993d7471243ba4333049f",
+  "expected_installed_sha256": "f7279a141946e6f26140386ca2e5bcf46d5f6802585de199938f7790db321ce5",
+  "gzip_sha256": "6278997a2eca4eeba94f587826f91f79a16ce7887528ab98b856bb14e60a7981",
+  "encoded_sha256": "529906b4d08dca3b5f8b6be3071bdaff8a017a9c7378a42a54480c7928d94081",
+  "chunks": [
+    "v6157.part00.b64",
+    "v6157.part01.b64",
+    "v6157.part02.b64",
+    "v6157.part03.b64",
+    "v6157.part04.b64",
+    "v6157.part05.b64",
+    "v6157.part06.b64",
+    "v6157.part07.b64",
+    "v6157.part08.b64"
+  ],
+  "chunk_byte_length": [
+    96000,
+    96000,
+    96000,
+    96000,
+    96000,
+    96000,
+    96000,
+    96000,
+    44140
+  ],
+  "uncompressed_vi_only_json_bytes": 2216978,
+  "compressed_bytes": 609105,
+  "base64_ascii_chars": 812140,
+  "copyright_notice": "Contains only Vietnamese target strings from user's current local localization. No English source strings, binaries or game assets.",
+  "game_runtime_verified": false
+}
