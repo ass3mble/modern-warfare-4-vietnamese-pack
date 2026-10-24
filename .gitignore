@@ -1,0 +1,32 @@
+# Game and third-party proprietary files (never commit)
+*.bin
+*.ff
+*.dll
+*.exe
+*.iwd
+*.pak
+*.zone
+*.ttf
+*.otf
+*.woff*
+*.zip
+*.7z
+*.rar
+*.har
+*.pfx
+*.pem
+.env
+.env.*
+*.log
+*.bak
+*.backup
+*.tmp
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+.DS_Store
+Thumbs.db
+# Keep test fixtures in source text only, no real game files
