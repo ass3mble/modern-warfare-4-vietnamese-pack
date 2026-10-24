@@ -11,8 +11,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 PROHIBITED = {chr(code) for code in (0x2012, 0x2013, 0x2014, 0x2015)}
-PROHIBITED_ENTITIES = ("&mdash;", "&ndash;", "&#8212;", "&#8211;",
-                       "&#x2014;", "&#x2013;")
+PROHIBITED_ENTITIES = tuple("&" + name + ";" for name in ("mdash", "ndash")) + (
+    tuple("&#" + str(number) + ";" for number in (8212, 8211))
+) + tuple("&#x" + code + ";" for code in ("2014", "2013"))
 TEXT_SUFFIXES = {".md", ".py", ".bat", ".ps1", ".json", ".txt", ".yaml", ".yml", ".toml", ".ini"}
 EXTRA_TEXT_FILES = {".gitignore", ".gitattributes", "LICENSE"}
 
