@@ -1,6 +1,6 @@
-# Modern Warfare 4 — Vietnamese Localization V6.157
+# Modern Warfare 4 - Vietnamese Localization V6.157
 
-**Full Vietnamese localization content — 40,085 strings.** Free community project; unofficial and not affiliated with Activision, Infinity Ward, or the game's publishers.
+**Full Vietnamese localization content - 40,085 strings.** Free community project; unofficial and not affiliated with Activision, Infinity Ward, or the game's publishers.
 
 The current public package contains the **complete Vietnamese target-text snapshot** of the locally validated V6.157 translation (24 October 2026), distributed as a compressed, source-only overlay. It does **not** contain copyrighted English game scripts, the original paired dictionary, commercial font data, executables, DLLs, fastfiles or other proprietary game assets.
 
