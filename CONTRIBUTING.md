@@ -9,3 +9,7 @@ Run `python -m unittest discover -s tests -v` before submitting. Never run game 
 ## Tiếng Việt
 
 Chỉ chia sẻ mã nguồn tự viết và tài liệu được phép phát hành. Không công khai bộ game, dữ liệu dịch trọn bộ, phông thương mại hoặc thông tin đăng nhập. Mọi chỉnh sửa phải có bằng chứng ngữ nghĩa và giữ nguyên placeholder / xuống dòng.
+
+## Repository writing style
+
+Use the regular ASCII hyphen `-` (U+002D) in all public repo descriptions, READMEs, release notes, documentation, and commit messages. Do not use long dash punctuation. Run `python -m unittest discover -s tests -v` to check the style rule before publishing.
