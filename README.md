@@ -1,81 +1,75 @@
-# Modern Warfare 4 — Vietnamese Localization Toolkit
+# Modern Warfare 4 — Vietnamese Localization V6.157
 
-> Unofficial community localization project. Not affiliated with or endorsed by Activision, Infinity Ward, or the game's publishers.
+**Full Vietnamese localization content — 40,085 strings.** Free community project; unofficial and not affiliated with Activision, Infinity Ward, or the game's publishers.
 
-**Repository:** public, source-only toolkit for auditing and preparing Vietnamese localization corrections for *Call of Duty: Modern Warfare 4 (2026)*.
+The current public package contains the **complete Vietnamese target-text snapshot** of the locally validated V6.157 translation (24 October 2026), distributed as a compressed, source-only overlay. It does **not** contain copyrighted English game scripts, the original paired dictionary, commercial font data, executables, DLLs, fastfiles or other proprietary game assets.
 
-## What is published?
+## 📥 Download / Tải bản Việt hóa
 
-- A read-only parser and validation tools for a UTF-8, length-prefixed translation dictionary.
-- A guarded builder for **detached candidates** generated from human-reviewed EN/VI corrections.
-- Offline synthetic tests, contribution guidelines, and release-integrity documentation.
+**[Download toàn bộ gói Việt hóa và trình cài (.zip)](https://github.com/ass3mble/modern-warfare-4-vietnamese-pack/archive/refs/heads/main.zip)**
 
-**This is not a redistribution of the game or a ready-to-play translation download.** No original game executable, fastfile, DLL, font, complete localization dictionary, paid content, extracted third-party pack, authentication token, or unauthorized game asset belongs in this repository. Review every contribution for redistribution rights.
+GitHub: click **Code → Download ZIP**, then extract the ZIP fully. **Do not run the installer inside an unopened ZIP.**
 
-## Status
+## Cách cài cho Windows
 
-| Area | Status |
+1. **Tắt game hoàn toàn.** Bạn cần bản game phù hợp, được cài hợp pháp và đã có **bộ nạp Việt hóa tương thích** có khả năng đọc `sp26/trdata2.bin`. Gói công khai này không kèm hoặc cài đặt hook/DLL.
+2. Cài **[Python 3](https://www.python.org/downloads/windows/)** nếu máy chưa có. Khi cài Python trên Windows, có thể chọn *Add Python to PATH*.
+3. Giải nén toàn bộ `modern-warfare-4-vietnamese-pack-main.zip`.
+4. Nhấp đúp **`INSTALL_VIET_HOA.bat`**.
+5. Chọn thư mục **gốc của game** (thư mục chứa `sp26`), ví dụ `F:\Call of Duty - MW 4 (2026)`. Không chọn riêng thư mục `sp26`.
+6. Nếu thông báo **SUCCESS**, bản Việt hóa đã được ghi vào `sp26\trdata2.bin`; tệp cũ được sao lưu với hậu tố `.BACKUP-...`. Mở game theo cách thông thường để kiểm tra.
+
+Có thể kéo-thả thư mục game vào `INSTALL_VIET_HOA.bat` thay vì chọn từ hộp thoại. Trường hợp `ALREADY INSTALLED` nghĩa là dữ liệu đang dùng đã trùng SHA-256 với bản phát hành này.
+
+### Cần biết trước khi cài
+
+- Trình cài xác minh cấu trúc **40.085 khóa tiếng Anh** và dấu vân tay nguồn SHA-256 **trước khi ghi**. Nếu dữ liệu game khác phiên bản tương thích, nó **từ chối cài** để tránh hỏng game.
+- Tệp đích được dựng lại từ dữ liệu nguồn **trên chính máy người dùng**, nên không cần tải nội dung gốc của game từ GitHub.
+- Luôn sao lưu bản cũ với SHA-256 được xác thực. Không chạm vào EXE, DLL, FF, anti-cheat, bộ font hoặc các tệp ngoài `sp26/trdata2.bin`.
+- Gói chỉ cung cấp **dữ liệu Việt hóa**; người cài vẫn cần bộ nạp hỗ trợ định dạng này. Không có bảo đảm bản game nguyên gốc chưa có loader sẽ tự hiển thị tiếng Việt.
+- Đây là bản **đã kiểm tra tĩnh trên bộ dữ liệu**, chưa được xác nhận kiểm thử toàn bộ 16 nhiệm vụ campaign và mọi màn hình thực tế.
+
+### Khôi phục / Restore
+
+Nếu cần quay lại bản cũ, hãy **thoát game** và vào thư mục `sp26`. Tìm tệp `trdata2.bin.BACKUP-...` do trình cài tạo. Giữ một bản sao an toàn của tệp này, đổi tên nó về `trdata2.bin` để thay tệp vừa cài. Không xóa bản backup cho đến khi game hoạt động bình thường.
+
+## Release contents
+
+| Item | Contents |
 | --- | --- |
-| Public source toolkit | In development |
-| Local campaign dialogue review | Ongoing |
-| Static validation of local candidates | Separate from this public repository |
-| In-game rendering and all 16 campaign missions | **Not fully verified** |
-| Redistributable Vietnamese translation package | **Not published** |
+| `pack/manifest.json` | Version, source fingerprint, segment list and exact integrity SHA-256 |
+| `pack/v6157.part00.b64` through `v6157.part08.b64` | All 40,085 Vietnamese target strings in nine compressed text segments; no English game text |
+| `INSTALL_VIET_HOA.bat` | Windows double-click launcher |
+| `INSTALL_VIET_HOA.py` | Offline installer: validate → build candidate → backup → atomic replacement → verify |
+| `tools/trdata.py` | Advanced low-level parser and reviewed correction validator |
+| `tests/test_trdata.py` | Synthetic-only parser tests, independent of commercial game files |
 
-The scripts here are intended for users working with **their own legitimately obtained local files**. They never need to start the game.
+**Release V6.157:** expected installed `sp26/trdata2.bin` SHA-256:
 
-## Quick start
+```text
+f7279a141946e6f26140386ca2e5bcf46d5f6802585de199938f7790db321ce5
+```
 
-Requires **Python 3.10+**; no third-party Python packages.
+Expected English source fingerprint:
 
-Inspect a locally owned dictionary:
+```text
+4e67f94799574f55f3398c3223811072741f9b19d75993d7471243ba4333049f
+```
+
+Verify a matching local game without modifying anything:
 
 ```bash
-python tools/trdata.py inspect "path/to/trdata2.bin" --expect-count 40085
+python INSTALL_VIET_HOA.py --game-dir "F:\Call of Duty - MW 4 (2026)" --verify-only
 ```
 
-Prepare a CSV with these exact columns:
+Installer integration was tested offline with a private synthetic/English-only translation target derived from the matching local key corpus; it generated a **byte-for-byte identical** `trdata2.bin` and verified a SHA-matched backup. That does **not** establish runtime font/gameplay compatibility.
 
-```csv
-id,EN_exact,installed_VI_exact,candidate_VI_exact
-```
+## Developers / Dành cho người đóng góp
 
-The CSV should contain only corrections you are authorized to share or use. Build a **new** output file, never the original:
-
-```bash
-python tools/trdata.py build "path/to/trdata2.bin" review.csv \
-  --base-sha YOUR_VERIFIED_SHA256 \
-  --out "separate-staging/candidate.bin" \
-  --expect-count 40085
-```
-
-Verify the result independently:
-
-```bash
-python tools/trdata.py verify "path/to/trdata2.bin" \
-  "separate-staging/candidate.bin" --review review.csv
-```
-
-Test without any game data:
+Run synthetic parser tests:
 
 ```bash
 python -m unittest discover -s tests -v
 ```
 
-The example count reflects one locally examined dictionary format; it is **not** a guarantee of compatibility with every version.
-
-## Safety guarantees
-
-The builder rejects a mismatched base SHA-256, missing or duplicate review IDs, source drift, control-token/newline changes, the source path as the output, and existing output files. It writes **only** an independently named candidate; installation into a running game is intentionally out of scope. Validate and back up separately before using any generated file.
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for copyright and review requirements and [SECURITY.md](SECURITY.md) for handling of suspicious files.
-
-## Tiếng Việt
-
-Repo công khai **công cụ và quy trình kiểm toán Việt hóa**, không chứa dữ liệu game gốc. Công cụ đọc tệp dịch cục bộ, kiểm tra cặp câu Anh–Việt, giữ nguyên placeholder/ngắt dòng và chỉ xuất ứng viên sang **đường dẫn mới**, không tự ghi đè bản LIVE.
-
-**Chưa xác nhận đã kiểm thử hoàn chỉnh trong game hoặc cả 16 nhiệm vụ campaign.** Các sửa đổi mới phải được rà ngữ cảnh, kiểm thử riêng và phát hành theo quy trình có sao lưu.
-
-## License
-
-[MIT](LICENSE) applies **only to original source code and documentation authored for this repository**. It does not grant permission to redistribute any game, third-party translations, assets, trademarks, or fonts.
+See [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md) and [LICENSE](LICENSE). MIT covers repository original installer/toolkit source, not third-party game assets. Do not commit private game files, proprietary fonts, loader DLLs or copyrighted English dictionaries.
