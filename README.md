@@ -1,75 +1,109 @@
-# Modern Warfare 4 - Vietnamese Localization V6.157
+# Call of Duty: Modern Warfare 4 | Vietnamese Localization
 
-**Full Vietnamese localization content - 40,085 strings.** Free community project; unofficial and not affiliated with Activision, Infinity Ward, or the game's publishers.
+**Bản Việt hóa cộng đồng dành cho Call of Duty: Modern Warfare 4 (2026), gồm 40.085 chuỗi văn bản và bộ cài đặt kiểm tra tính tương thích trước khi thay tệp.**
 
-The current public package contains the **complete Vietnamese target-text snapshot** of the locally validated V6.157 translation (24 October 2026), distributed as a compressed, source-only overlay. It does **not** contain copyrighted English game scripts, the original paired dictionary, commercial font data, executables, DLLs, fastfiles or other proprietary game assets.
+Dự án tập trung vào lời thoại chiến dịch, phụ đề, mục tiêu nhiệm vụ, giao diện và thuật ngữ trong trò chơi. Mục tiêu là giúp nội dung tiếng Việt dễ hiểu, đúng ngữ cảnh và giữ được nhịp kể chuyện của một trò chơi bắn súng góc nhìn thứ nhất.
 
-## 📥 Download / Tải bản Việt hóa
+Đây là dự án độc lập, miễn phí, không liên kết hoặc được bảo trợ bởi Activision, Infinity Ward hay nhà phát hành trò chơi.
 
-**[Download toàn bộ gói Việt hóa và trình cài (.zip)](https://github.com/ass3mble/modern-warfare-4-vietnamese-pack/archive/refs/heads/main.zip)**
+> **Phiên bản công khai trong kho:** V6.157, ngày 24/10/2026. Đây là phiên bản của gói được đăng trong kho này, không phải lời khẳng định rằng nó tương thích với mọi bản cập nhật trò chơi. Gói đã được đối chiếu cấu trúc dữ liệu và kiểm tra cài đặt ngoại tuyến, nhưng chưa kiểm chứng trực tiếp toàn bộ 16 nhiệm vụ chiến dịch.
 
-GitHub: click **Code → Download ZIP**, then extract the ZIP fully. **Do not run the installer inside an unopened ZIP.**
+## Tải bản Việt hóa
 
-## Cách cài cho Windows
+**[Tải trọn bộ bản Việt hóa và trình cài đặt](https://github.com/ass3mble/modern-warfare-4-vietnamese-pack/archive/refs/heads/main.zip)**
 
-1. **Tắt game hoàn toàn.** Bạn cần bản game phù hợp, được cài hợp pháp và đã có **bộ nạp Việt hóa tương thích** có khả năng đọc `sp26/trdata2.bin`. Gói công khai này không kèm hoặc cài đặt hook/DLL.
-2. Cài **[Python 3](https://www.python.org/downloads/windows/)** nếu máy chưa có. Khi cài Python trên Windows, có thể chọn *Add Python to PATH*.
-3. Giải nén toàn bộ `modern-warfare-4-vietnamese-pack-main.zip`.
-4. Nhấp đúp **`INSTALL_VIET_HOA.bat`**.
-5. Chọn thư mục **gốc của game** (thư mục chứa `sp26`), ví dụ `F:\Call of Duty - MW 4 (2026)`. Không chọn riêng thư mục `sp26`.
-6. Nếu thông báo **SUCCESS**, bản Việt hóa đã được ghi vào `sp26\trdata2.bin`; tệp cũ được sao lưu với hậu tố `.BACKUP-...`. Mở game theo cách thông thường để kiểm tra.
+Trên GitHub, bạn cũng có thể chọn `Code` rồi `Download ZIP`. Sau khi tải, **giải nén toàn bộ** trước khi chạy tệp cài đặt.
 
-Có thể kéo-thả thư mục game vào `INSTALL_VIET_HOA.bat` thay vì chọn từ hộp thoại. Trường hợp `ALREADY INSTALLED` nghĩa là dữ liệu đang dùng đã trùng SHA-256 với bản phát hành này.
+## Bản này gồm những gì?
 
-### Cần biết trước khi cài
-
-- Trình cài xác minh cấu trúc **40.085 khóa tiếng Anh** và dấu vân tay nguồn SHA-256 **trước khi ghi**. Nếu dữ liệu game khác phiên bản tương thích, nó **từ chối cài** để tránh hỏng game.
-- Tệp đích được dựng lại từ dữ liệu nguồn **trên chính máy người dùng**, nên không cần tải nội dung gốc của game từ GitHub.
-- Luôn sao lưu bản cũ với SHA-256 được xác thực. Không chạm vào EXE, DLL, FF, anti-cheat, bộ font hoặc các tệp ngoài `sp26/trdata2.bin`.
-- Gói chỉ cung cấp **dữ liệu Việt hóa**; người cài vẫn cần bộ nạp hỗ trợ định dạng này. Không có bảo đảm bản game nguyên gốc chưa có loader sẽ tự hiển thị tiếng Việt.
-- Đây là bản **đã kiểm tra tĩnh trên bộ dữ liệu**, chưa được xác nhận kiểm thử toàn bộ 16 nhiệm vụ campaign và mọi màn hình thực tế.
-
-### Khôi phục / Restore
-
-Nếu cần quay lại bản cũ, hãy **thoát game** và vào thư mục `sp26`. Tìm tệp `trdata2.bin.BACKUP-...` do trình cài tạo. Giữ một bản sao an toàn của tệp này, đổi tên nó về `trdata2.bin` để thay tệp vừa cài. Không xóa bản backup cho đến khi game hoạt động bình thường.
-
-## Release contents
-
-| Item | Contents |
+| Thành phần | Nội dung |
 | --- | --- |
-| `pack/manifest.json` | Version, source fingerprint, segment list and exact integrity SHA-256 |
-| `pack/v6157.part00.b64` through `v6157.part08.b64` | All 40,085 Vietnamese target strings in nine compressed text segments; no English game text |
-| `INSTALL_VIET_HOA.bat` | Windows double-click launcher |
-| `INSTALL_VIET_HOA.py` | Offline installer: validate → build candidate → backup → atomic replacement → verify |
-| `tools/trdata.py` | Advanced low-level parser and reviewed correction validator |
-| `tests/test_trdata.py` | Synthetic-only parser tests, independent of commercial game files |
+| Bản dịch | 40.085 chuỗi tiếng Việt trong gói V6.157 |
+| Chiến dịch | Lời thoại, phụ đề, mô tả và mục tiêu nhiệm vụ có trong bộ dữ liệu |
+| Giao diện | Văn bản và thuật ngữ tương ứng trong bộ dữ liệu |
+| Trình cài | Tạo tệp Việt hóa từ dữ liệu gốc phù hợp trên máy người dùng |
+| Kiểm tra | Xác minh cấu trúc, dấu vân tay dữ liệu, bản sao lưu và kết quả ghi |
+| Khôi phục | Có thể trở về tệp trước khi cài bằng bản sao lưu |
 
-**Release V6.157:** expected installed `sp26/trdata2.bin` SHA-256:
+**Giới hạn quan trọng:** Gói không đi kèm bộ nạp Việt hóa, phông chữ thương mại hay các tệp thực thi của trò chơi. Muốn thấy tiếng Việt trong trò chơi, bạn phải có bộ nạp tương thích với `sp26/trdata2.bin`. Trình cài không tự bổ sung bộ nạp.
+
+## Cách cài trên Windows
+
+1. **Thoát trò chơi hoàn toàn.**
+2. Đảm bảo bạn có bản trò chơi phù hợp được cài hợp pháp và đã có bộ nạp Việt hóa tương thích.
+3. Cài [Python 3](https://www.python.org/downloads/windows/) nếu máy chưa có. Khi cài, có thể bật tùy chọn thêm Python vào đường dẫn hệ thống.
+4. Tải và giải nén toàn bộ kho mã nguồn.
+5. Nhấp đúp `INSTALL_VIET_HOA.bat`.
+6. Chọn **thư mục gốc của trò chơi**, tức thư mục chứa `sp26`. Ví dụ: `F:\Call of Duty - MW 4 (2026)`.
+7. Đọc thông báo của trình cài trước khi mở trò chơi để kiểm tra.
+
+Bạn có thể kéo thả thư mục gốc trò chơi vào `INSTALL_VIET_HOA.bat` thay cho việc chọn thư mục bằng hộp thoại.
+
+### Hiểu thông báo của trình cài
+
+- `SUCCESS`: dữ liệu Việt hóa đã được ghi và kiểm tra. Tệp cũ được sao lưu.
+- `ALREADY INSTALLED`: tệp hiện tại đã có dấu vân tay SHA-256 trùng với bản phát hành này.
+- Nếu dữ liệu nguồn không khớp: trình cài sẽ từ chối ghi để tránh áp một bộ dịch không tương thích.
+
+Đừng cố bỏ qua bước xác minh phiên bản nếu trình cài từ chối. Việc ghép bản dịch sai cấu trúc có thể làm hỏng tệp ngôn ngữ.
+
+## Cách khôi phục bản cũ
+
+1. Thoát trò chơi.
+2. Vào thư mục `sp26`.
+3. Tìm tệp `trdata2.bin.BACKUP-...` được tạo khi cài.
+4. Giữ lại một bản sao an toàn, sau đó khôi phục tệp đã sao lưu về tên `trdata2.bin`.
+5. Mở lại trò chơi và kiểm tra.
+
+Không xóa bản sao lưu khi chưa xác nhận trò chơi hoạt động bình thường.
+
+## Tính tương thích và an toàn tệp
+
+Trước khi ghi, trình cài xác minh thứ tự và cấu trúc **40.085 khóa nguồn tiếng Anh**, cùng dấu vân tay SHA-256. Dữ liệu đích được dựng từ tệp gốc có sẵn trên máy người dùng.
+
+Trình cài chỉ cần thay `sp26/trdata2.bin`. Nó không sửa tệp thực thi, thư viện, dữ liệu trò chơi khác hoặc hệ thống chống gian lận. Việc thay tệp được thực hiện sau khi tạo bản sao lưu và kiểm tra dữ liệu ứng viên.
+
+**Dấu vân tay SHA-256 của tệp đã cài V6.157:**
 
 ```text
 f7279a141946e6f26140386ca2e5bcf46d5f6802585de199938f7790db321ce5
 ```
 
-Expected English source fingerprint:
+**Dấu vân tay SHA-256 của bộ nguồn tiếng Anh tương thích:**
 
 ```text
 4e67f94799574f55f3398c3223811072741f9b19d75993d7471243ba4333049f
 ```
 
-Verify a matching local game without modifying anything:
+Chỉ kiểm tra, không thay tệp:
 
-```bash
+```powershell
 python INSTALL_VIET_HOA.py --game-dir "F:\Call of Duty - MW 4 (2026)" --verify-only
 ```
 
-Installer integration was tested offline with a private synthetic/English-only translation target derived from the matching local key corpus; it generated a **byte-for-byte identical** `trdata2.bin` and verified a SHA-matched backup. That does **not** establish runtime font/gameplay compatibility.
+Việc thử nghiệm trình cài được thực hiện ngoại tuyến trên bộ dữ liệu khớp cấu trúc. Kết quả đối chiếu tệp và bản sao lưu không thay thế cho việc kiểm thử hiển thị phông chữ, phụ đề và toàn bộ quá trình chơi.
 
-## Developers / Dành cho người đóng góp
+## Các tệp trong kho
 
-Run synthetic parser tests:
+| Đường dẫn | Công dụng |
+| --- | --- |
+| `pack/manifest.json` | Phiên bản, dấu vân tay dữ liệu và danh sách các phần gói |
+| `pack/v6157.part00.b64` đến `pack/v6157.part08.b64` | Chín phần dữ liệu văn bản tiếng Việt đã nén |
+| `INSTALL_VIET_HOA.bat` | Mở trình cài trên Windows |
+| `INSTALL_VIET_HOA.py` | Kiểm tra, dựng tệp, sao lưu, ghi và hậu kiểm |
+| `tools/trdata.py` | Công cụ đọc cấu trúc dữ liệu và kiểm tra thay đổi |
+| `tests/test_trdata.py` | Kiểm thử trên dữ liệu mô phỏng, không cần tệp trò chơi thương mại |
 
-```bash
+Kho chỉ phát hành dữ liệu đích bằng tiếng Việt và mã nguồn công cụ do dự án tạo ra. Không phân phối nguyên văn kịch bản tiếng Anh có bản quyền, bộ từ điển gốc, phông chữ độc quyền, thư viện nạp hoặc tệp thực thi của trò chơi.
+
+## Dành cho người muốn đóng góp
+
+Kiểm tra công cụ với dữ liệu mô phỏng:
+
+```powershell
 python -m unittest discover -s tests -v
 ```
 
-See [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md) and [LICENSE](LICENSE). MIT covers repository original installer/toolkit source, not third-party game assets. Do not commit private game files, proprietary fonts, loader DLLs or copyrighted English dictionaries.
+Khi góp ý bản dịch, hãy cung cấp mã chuỗi, bản tiếng Việt hiện tại, tình huống trong trò chơi và câu đề xuất. Ưu tiên lỗi làm sai người nói, phủ định, diễn biến câu chuyện và mục tiêu nhiệm vụ.
+
+Xem thêm [hướng dẫn đóng góp](CONTRIBUTING.md), [thông tin an toàn](SECURITY.md) và [giấy phép](LICENSE). Giấy phép MIT chỉ áp dụng cho phần mã nguồn và công cụ gốc của dự án, không áp dụng cho tài sản thuộc bên thứ ba.
